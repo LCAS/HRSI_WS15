@@ -1,5 +1,3 @@
-HRSI_WS14
-=========
-A repository for the organisation of the HRSI 2015 workshop
+This repository is used to serve content via https://rawgit.com/
 
-__Note:__ Any updates to the branch master in `website/` go public straight away at http://lcas.lincoln.ac.uk/hrsi15
+Each website should be in a separate branch
