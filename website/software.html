@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   	<meta name="viewport" content="width=device-width, initial-scale=1">
+   	<meta name="description" content="">
+   	<meta name="author" content="Christian Dondrup" >
+
+    	<title>Software</title>
+
+    	<!-- Bootstrap core CSS -->
+    	<link href="css/bootstrap.min.css" rel="stylesheet">
+    	<!-- Bootstrap theme -->
+    	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    	<!-- Custom styles for this template -->
+    	<link href="theme.css" rel="stylesheet">
+	</head>
+	<body role="document">
+		<!-- Fixed navbar -->
+	   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	     	<div class="container">
+	       	<div class="navbar-header">
+	         	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	           		<span class="sr-only">Toggle navigation</span>
+	         	</button>
+	         	<a class="navbar-brand" href="http://staff.lincoln.ac.uk/cdondrup">Christian Dondrup</a>
+	       	</div>
+	       	<div id="navbar" class="navbar-collapse collapse">
+	         	<ul class="nav navbar-nav">
+	           		<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="research.html">Research</a></li>
+						<li><a href="software.html">Software</a></li>
+	      	   </ul>
+	   	   </div><!--/.nav-collapse -->
+		   </div>
+	   </nav>
+		<div class="container theme-showcase" role="main">
+			<div class="panel panel-default">
+  				<div class="panel-heading">
+    				<h3 class="panel-title">People Perception</h3>
+  				</div>
+  				<div class="panel-body">
+    				<div class="media">
+			  			<div class="media-left media-top">
+				  			<a href="images/ppl_perception.png" class="thumbnail">
+				    			<img class="media-object" src="images/thumbnails/ppl_perception.png" alt="People Perception">
+							</a>
+			  			</div>
+			  			<div class="media-body">
+			    			All currently used mobile robot platforms are able to navigate safely through their environment, 
+			    			avoiding static and dynamic obstacles. However, in human populated environments mere obstacle 
+			    			avoidance is not sufficient to make humans feel comfortable and safe around robots. To this end, 
+			    			a large community is currently producing human-aware navigation approaches to create a more socially 
+			    			acceptable robot behaviour. A major building block for all Human-Robot Spatial Interaction is the 
+			    			ability of detecting and tracking humans in the vicinity of the robot. We present a fully 
+			    			integrated people perception framework, designed to run in real-time on a mobile robot. This 
+			    			framework employs detectors based on laser and RGB-D data and a tracking approach able to fuse 
+			    			multiple detectors using different versions of data association and Kalman filtering. The resulting 
+			    			trajectories are transformed into Qualitative Spatial Relations based on a Qualitative Trajectory 
+			    			Calculus, to learn and classify different encounters using a Hidden Markov Model based representation.
+			    			<br><br>
+			    			The whole pipeline has been fully implemented into the Robot Operating System (ROS) Indigo and Hydro. 
+			    			The video below shows how it works on a mobile robot. PLACE HOLDER VIDEO.<br><br>
+			    			<div class="embed-responsive embed-responsive-16by9">
+								<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zdnvhQU1YNo?rel=0&cc_load_policy=1"></iframe>
+							</div>
+			    			<br><br>
+			    			<b>Installation via custom PPA</b><br>
+			    			Please follow the instruction to <a href="https://github.com/strands-project-releases/strands-releases/wiki#using-the-strands-repository"/>set-up 
+			    			the STRANDS repository</a>.<br> 
+			    			The perception pipeline can then be installed via: <code>sudo apt-get install ros-$DISTRO-strands-perception-people</code>
+			    			<br><br>
+			    			<b>Source Code</b><br>
+			    			The sources can be found on <a href="https://github.com/strands-project/strands_perception_people">our github webpage</a> and are 
+			    			freely available under the MIT license.
+							<br><br>
+							<b>Usage</b><br>
+							Instructions on how to use the system can be found on the github page mentioned above. Especial <a href="">the launch package</a> provides 
+							instructions on how to start the complete system.
+			  			</div>
+					</div>
+  				</div>
+			</div>
+			<br>
+			<div class="panel panel-default">
+  				<div class="panel-heading">
+    				<h3 class="panel-title">Generation of Qualitative Spatial Relations for Human-Robot Spatial Interaction</h3>
+  				</div>
+  				<div class="panel-body">
+    				<div class="media">
+			  			<div class="media-left media-top">
+				  			<a href="images/prob_hmm.png" class="thumbnail">
+				    			<img class="media-object" src="images/thumbnails/prob_hmm.png" alt="People Perception">
+							</a>
+			  			</div>
+			  			<div class="media-body">
+			    			We propose a probabilistic model for Human-Robot Spatial Interaction (HRSI) using a Qualitative Trajectory 
+			    			Calculus (QTC). Our model accounts for the invalidity of certain transitions within the QTC to reduce the 
+			    			complexity of the probabilistic model and to ensure state sequences in accordance to this representational 
+			    			framework.<br>
+			    			We developed a python library with ROS compatibility to create Qualitative Spatial Relations which is 
+			    			available <a href="https://github.com/strands-project/strands_qsr_lib">from our github page</a>. the base library  
+			    			has been developed by <a href="https://www.engineering.leeds.ac.uk/people/computing/staff/y.gatsoulis">Dr Yiannis Gatsoulis</a>. 
+			    			The QTC definitions have been added by Christian Dondrup.
+			    			<br><br>
+			    			<b>Installation via custom PPA</b><br>
+			    			Please follow the instruction to <a href="https://github.com/strands-project-releases/strands-releases/wiki#using-the-strands-repository"/>set-up 
+			    			the STRANDS repository</a>.<br> 
+			    			The library can then be installed via: <code>sudo apt-get install ros-$DISTRO-strands-qsr-lib</code>
+			    			<br><br>
+			    			<b>Source Code</b><br>
+			    			The sources can be found on <a href="https://github.com/strands-project/strands_qsr_lib">our github webpage</a> and are 
+			    			freely available under the MIT license.
+							<br><br>
+							<b>Usage</b><br>
+							Instructions on how to use the system can be found on the github page mentioned above.
+			    			<br><br>
+							<b>Online QTC state chain generation from tracker output</b><br>
+			    			The only creation of QTC state chains and training and/or classification via HMMs is currently under development. 
+			    			The most current version can be found on <a href="https://github.com/cdondrup/strands_hri/tree/hrsi">my github fork</a>.
+			  			</div>
+					</div>
+  				</div>
+			</div>
+		</div> <!-- /container -->
+
+	</body>
+</html>
