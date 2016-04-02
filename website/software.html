@@ -40,37 +40,42 @@
 		<div class="container theme-showcase" role="main">
 		   <div class="panel panel-default">
   				<div class="panel-heading">
-    				<h3 class="panel-title">Velocity Costmaps</h3>
+    				<h3 class="panel-title">Qualitative Constraints for Human-aware Robot Navigation</h3>
   				</div>
   				<div class="panel-body">
     				<div class="media">
 			  			<div class="media-left media-top">
-				  			<a href="images/ppl_perception.png" class="thumbnail">
-				    			<img class="media-object" src="images/thumbnails/ppl_perception.png" alt="People Perception">
+				  			<a href="images/han.png" class="thumbnail">
+				    			<img class="media-object" src="images/thumbnails/han.png" alt="Human-aware Navigation pipeline">
 							</a>
 			  			</div>
 			  			<div class="media-body">
 			    			In this work, we propose the combination of a state-of-the-art sampling-based local planner with so-called Velocity Costmaps
-			    			to achieve human-aware robot navigation. Instead of introducing humans as ``special obstacles'' into the representation of 
-			    			the environment, we restrict the sample space of a ``Dynamic Window Approach'' local planner to only allow trajectories based 
-			    			on a qualitative description of the supposed interaction. Hence, we are ensuring collision free trajectories by obeying prior 
-			    			knowledge of the unfolding of the encounter. 
+			    			and a particle filter for Qualitative Spatial Reltaions to achieve human-aware robot navigation. Instead of introducing humans 
+			    			as ``special obstacles'' into the representation of the environment, we restrict the sample space of a ``Dynamic Window Approach'' 
+			    			local planner to only allow trajectories based on a qualitative description of the supposed interaction. Hence, we are ensuring 
+			    			collision free trajectories by obeying prior knowledge of the unfolding of the encounter. 
 							To achieve this, we use the well-established Qualitative Trajectory Calculus to model the mutual navigation intent of human 
 							and robot, and translate these descriptors into sample space constraints for trajectory generation. 
-			    			<br><br>
+			    			<br><br><img width="800" class="media-object" src="images/han.png" alt="Human-aware Navigation pipeline"><br><br>
 			    			The whole pipeline has been fully implemented into the Robot Operating System (ROS) Indigo and Hydro. 
 			    			The video below shows how it works on a mobile robot.<br><br>
 			    			<div class="embed-responsive embed-responsive-16by9">
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/evWTA8FcYJo" frameborder="0" allowfullscreen></iframe>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/sq0yG6Z0wU0" frameborder="0" allowfullscreen></iframe>
 							</div>
 			    			<br><br>
 			    			<b>Source Code</b><br>
-			    			The sources can be found on <a href="http://github.com/cdondrup/strands_hri/tree/new_human_aware">my github webpage</a> and 
-			    			<a href="https://github.com/cdondrup/plugin_local_planner/tree/velocity_costmaps"> here for the modified local planner</a> and are 
-			    			freely available under the MIT and/or BSD license.
+			    			Particle Filter: <a href="https://github.com/strands-project/strands_qsr_lib/tree/master/qsr_prob_rep">github</a><br>
+			    			Online QTC Generation: <a href="https://github.com/strands-project/strands_hri/tree/hydro-devel/hrsi_representation">github</a><br>
+			    			Online Classification: <a href="https://github.com/strands-project/strands_hri/tree/hydro-devel/hrsi_state_prediction">github</a><br>
+			    			Velocity Costmap Server: <a href="https://github.com/strands-project/strands_hri/tree/hydro-devel/hrsi_velocity_costmaps">github</a><br>
+			    			Modified DWA: <a href="https://github.com/strands-project/navigation">github</a>
 							<br><br>
-							<b>Usage</b><br>
-							Instructions on how to use the system are a little scarce due to various deadlines but will be added to the github page mentioned above. 
+							<b>Debian Packages</b><br>
+							Please follow the <a href="https://github.com/strands-project-releases/strands-releases/wiki">instructions</a> on setting up the STRANDS 
+							repositories. Afterwards, install:<br>
+							<pre><code>sudo apt-get install ros-indigo-hrsi-launch</pre></code>
+							to get all the relevant components apart from the modified navigation framework. For now, please install this from source.
 			  			</div>
 					</div>
   				</div>
